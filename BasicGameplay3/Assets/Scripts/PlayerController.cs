@@ -3,11 +3,11 @@ using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
-    private float horizontalInput;
-    private float speed = 18.5f;
+    public float horizontalInput;
+    private float speed = 15.0f;
     private float xRange = 24.0f;
 
-    private GameObject projectilePrefab;
+    public GameObject projectilePrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
+        
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
