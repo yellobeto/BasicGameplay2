@@ -3,16 +3,16 @@ using UnityEngine.XR;
 
 public class PlayerController : MonoBehaviour
 {
-    public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 24.0f;
+    private float horizontalInput;
+    private float speed = 18.5f;
+    private float xRange = 24.0f;
 
-    public GameObject projectilePrefab;
+    private GameObject projectilePrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-         }
-       
+        }
+
     }
 }
